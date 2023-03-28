@@ -107,7 +107,6 @@ export const addNetwork = async (chain: ISupportedChains = supportedChains[0], o
     });
     onAdded?.();
   } catch (error) {
-    console.log(error);
     onError?.(error);
   }
 }
@@ -127,7 +126,6 @@ export const changeNetwork = async (chain: ISupportedChains, onChanged?: Functio
 
 export const useEagerConnect = () => {
   const { activate, active } = useWeb3React();
-
   const [tried, setTried] = useState(false);
 
   useEffect(() => {

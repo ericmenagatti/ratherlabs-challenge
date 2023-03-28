@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren, CSSProperties } from "react";
 import { Layout, Space } from "antd";
+import Link from 'next/link';
 
 const headerStyle: CSSProperties = {
   width: '100%',
@@ -30,7 +31,7 @@ const MainLayout: FC<PropsWithChildren> = ({ children }) => {
     <Space direction='vertical' style={{ width: '100%' }}>
       <Layout style={{ background: 'white' }}>
         <Header style={headerStyle}>
-          <div style={logoStyle}>$QUIZ Surveys</div>
+          <Link href="/" style={logoStyle}>$QUIZ Surveys</Link>
         </Header>
         <main style={mainStyle}>
           {children}
